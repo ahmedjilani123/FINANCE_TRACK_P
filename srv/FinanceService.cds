@@ -5,5 +5,6 @@ service financeSrv {
     entity Users as projection on db.Users;
     entity Transactions as projection on db.Transaction;
     entity Categorys as projection on db.Category;
+    action Login(UserId:String,Pass:String) returns String;
     
 }

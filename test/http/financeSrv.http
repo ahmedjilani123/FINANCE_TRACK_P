@@ -1,0 +1,174 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Users
+# @name Users_GET
+GET {{server}}/odata/v4/finance-srv/Users
+Authorization: Basic {{username}}:{{password}}
+
+
+### Users
+# @name Users_POST
+POST {{server}}/odata/v4/finance-srv/Users
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11451456-7832-4cfe-8a58-e8c81af87a20",
+  "fullName": "fullName-11451456",
+  "email": "email-11451456",
+  "password": "password-11451456",
+  "createdAt": "2001-01-18T18:30:00.000Z",
+  "createdBy": "createdBy.6tg00@example.net",
+  "modifiedAt": "2022-11-14T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.6tg00@example.net"
+}
+
+
+### Users
+# @name Users_PATCH
+PATCH {{server}}/odata/v4/finance-srv/Users/11451456-7832-4cfe-8a58-e8c81af87a20
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11451456-7832-4cfe-8a58-e8c81af87a20",
+  "fullName": "fullName-11451456",
+  "email": "email-11451456",
+  "password": "password-11451456",
+  "createdAt": "2001-01-18T18:30:00.000Z",
+  "createdBy": "createdBy.6tg00@example.net",
+  "modifiedAt": "2022-11-14T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.6tg00@example.net"
+}
+
+
+### Users
+# @name Users_DELETE
+DELETE {{server}}/odata/v4/finance-srv/Users/11451456-7832-4cfe-8a58-e8c81af87a20
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Transactions
+# @name Transactions_GET
+GET {{server}}/odata/v4/finance-srv/Transactions
+Authorization: Basic {{username}}:{{password}}
+
+
+### Transactions
+# @name Transactions_POST
+POST {{server}}/odata/v4/finance-srv/Transactions
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 7497351,
+  "type": "Expense",
+  "amount": 1712812,
+  "description": "description-7497351",
+  "category": "category-7497351",
+  "user": {
+    "ID": "11451456-7832-4cfe-8a58-e8c81af87a20"
+  },
+  "createdAt": "2017-12-26T18:30:00.000Z",
+  "createdBy": "createdBy.4gozr@example.org",
+  "modifiedAt": "2006-03-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.4gozr@example.net"
+}
+
+
+### Transactions
+# @name Transactions_PATCH
+PATCH {{server}}/odata/v4/finance-srv/Transactions/7497351
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 7497351,
+  "type": "Expense",
+  "amount": 1712812,
+  "description": "description-7497351",
+  "category": "category-7497351",
+  "user": {
+    "ID": "11451456-7832-4cfe-8a58-e8c81af87a20"
+  },
+  "createdAt": "2017-12-26T18:30:00.000Z",
+  "createdBy": "createdBy.4gozr@example.org",
+  "modifiedAt": "2006-03-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.4gozr@example.net"
+}
+
+
+### Transactions
+# @name Transactions_DELETE
+DELETE {{server}}/odata/v4/finance-srv/Transactions/7497351
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Categorys
+# @name Categorys_GET
+GET {{server}}/odata/v4/finance-srv/Categorys
+Authorization: Basic {{username}}:{{password}}
+
+
+### Categorys
+# @name Categorys_POST
+POST {{server}}/odata/v4/finance-srv/Categorys
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15987230-247e-49fa-bf79-65d74831b197",
+  "name": "name-15987230",
+  "text": "text-15987230",
+  "user": {
+    "ID": "11451456-7832-4cfe-8a58-e8c81af87a20"
+  },
+  "createdAt": "2002-09-25T18:30:00.000Z",
+  "createdBy": "createdBy.9intq@example.org",
+  "modifiedAt": "2019-01-11T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.9intq@example.com"
+}
+
+
+### Categorys
+# @name Categorys_PATCH
+PATCH {{server}}/odata/v4/finance-srv/Categorys/15987230-247e-49fa-bf79-65d74831b197
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15987230-247e-49fa-bf79-65d74831b197",
+  "name": "name-15987230",
+  "text": "text-15987230",
+  "user": {
+    "ID": "11451456-7832-4cfe-8a58-e8c81af87a20"
+  },
+  "createdAt": "2002-09-25T18:30:00.000Z",
+  "createdBy": "createdBy.9intq@example.org",
+  "modifiedAt": "2019-01-11T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.9intq@example.com"
+}
+
+
+### Categorys
+# @name Categorys_DELETE
+DELETE {{server}}/odata/v4/finance-srv/Categorys/15987230-247e-49fa-bf79-65d74831b197
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Login
+# @name Login_POST
+POST {{server}}/odata/v4/finance-srv/Login
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "UserId": "UserId-15995538",
+  "Pass": "Pass-15995538"
+}
